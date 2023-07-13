@@ -1,0 +1,25 @@
+{
+  "prettier.prettierPath": "./node_modules/prettier",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "stylelint.validate": ["css", "scss"],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "activeClassName",
+    ".*Styles"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "[mdx]": {
+    "editor.wordWrap": "on",
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
