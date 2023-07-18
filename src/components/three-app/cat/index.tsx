@@ -117,7 +117,7 @@ export const Cat = () => {
         ])
         changeAnimation(newAnimation)
         randomActionTicker()
-      }, 15000)
+      }, 20 * 1000)
     }
 
     const setSleep = (newSleep: boolean) => {
@@ -143,7 +143,7 @@ export const Cat = () => {
         if (isCancelled) return
         setSleep(!isSleeping)
         sleepTicker()
-      }, 20000)
+      }, 90 * 1000)
     }
     sleepTicker()
 

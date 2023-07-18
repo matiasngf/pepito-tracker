@@ -1,17 +1,8 @@
-import { Environment, useTexture } from "@react-three/drei"
-import { useThree } from "@react-three/fiber"
-import { SRGBColorSpace } from "three"
+import { Environment } from "@react-three/drei"
 
 import { Building } from "../building"
 
 export const Outside = () => {
-  const outsideBackground = useTexture("/outside-background.jpg")
-
-  useThree(({ scene }) => {
-    outsideBackground.colorSpace = SRGBColorSpace
-
-    scene.background = outsideBackground
-  })
   return (
     <>
       <Environment files="/outside.hdr" background={false} />

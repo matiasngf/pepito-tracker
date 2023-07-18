@@ -1,17 +1,8 @@
-import { Environment, useTexture } from "@react-three/drei"
-import { useThree } from "@react-three/fiber"
-import { SRGBColorSpace } from "three"
+import { Environment } from "@react-three/drei"
 
 import { Table } from "../table"
 
 export const Inside = () => {
-  const insideBackground = useTexture("/inside-background.jpg")
-
-  useThree(({ scene }) => {
-    insideBackground.colorSpace = SRGBColorSpace
-
-    scene.background = insideBackground
-  })
   return (
     <>
       <Environment files="/inside.hdr" background={false} />

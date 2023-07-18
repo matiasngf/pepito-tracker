@@ -67,7 +67,7 @@ const Page = ({
     <div className="relative w-screen h-screen">
       <ThreeApp />
       <div className="absolute bottom-10 flex justify-center w-full">
-        <h1 className="text-white text-4xl opacity-50">
+        <h1 className="text-white text-3xl lg:text-4xl opacity-50">
           Pépito is {isOutside ? "out" : "back home"} {time}
         </h1>
       </div>
