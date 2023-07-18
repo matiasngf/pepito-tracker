@@ -18,6 +18,7 @@
     "@react-three/drei": "^9.68.3",
     "@react-three/fiber": "^8.13.0",
     "@studio-freight/lenis": "^1.0.12",
+    "airtable": "^0.12.1",
     "clsx": "^1.2.1",
     "gsap": "^3.11.5",
     "next": "^13.4.2",

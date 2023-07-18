@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber"
 import { usePepitoStore } from "~/hooks/use-pepito"
 
 import { Cat } from "./cat"
+import { Inside } from "./inside"
 import { Outside } from "./outside"
 
 export const ThreeApp = () => {
@@ -20,7 +21,7 @@ export const ThreeApp = () => {
         far: 30,
       }}
     >
-      {isOutside && <Outside />}
+      {isOutside ? <Outside /> : <Inside />}
       <ContactShadows
         opacity={0.5}
         scale={4}

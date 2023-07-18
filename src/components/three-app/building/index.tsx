@@ -16,7 +16,7 @@ export const Building = () => {
       <mesh
         rotation={[0, Math.PI * 1.5, 0]}
         receiveShadow
-        position={[-1.5, -0.501, 0]}
+        position={[-1.2, -0.501, 0]}
       >
         <boxGeometry args={[16, 1, 5]} />
         <meshPhysicalMaterial map={map} />
