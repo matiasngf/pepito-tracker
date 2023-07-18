@@ -1,5 +1,6 @@
 import type { FieldSet, Records } from "airtable"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
+import Head from "next/head"
 import { useEffect } from "react"
 
 import { About } from "~/components/about"
@@ -66,6 +67,9 @@ const Page = ({
   const isOutside = usePepitoStore((state) => state.isOutside)
   return (
     <div className="relative w-screen h-screen">
+      <Head>
+        <title>Is pepito out?</title>
+      </Head>
       <ThreeApp />
       <About className="absolute top-5 left-5" />
       <div className="absolute bottom-10 flex justify-center w-full">

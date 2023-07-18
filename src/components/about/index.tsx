@@ -57,8 +57,61 @@ export const About = ({ className }: AboutProps) => {
               @matiNotFound
             </Link>
           </p>
+          <p>
+            <b>3D models credits: </b>
+            This work is based on the models{" "}
+            <ModelCredit
+              modelName="Cat [Soul Suspect]"
+              modelUrl="cat-murdered-soul-suspect-836312def1b84e588866500a2bf79f0f"
+              authorName="mark2580"
+              authorUrl="mark2580"
+            />{" "}
+            and{" "}
+            <ModelCredit
+              modelName="Wooden Table"
+              modelUrl="wooden-table-c0f6e92135be4206a0b5de58c9d5f336"
+              authorName="Ygor L.Cavalcante"
+              authorUrl="ygorofflc"
+            />
+            . The models, materials, and animations were modified to fit this
+            project.
+          </p>
         </div>
       </ReactModal>
     </>
+  )
+}
+
+interface ModelCreditProps {
+  modelName: string
+  modelUrl: string
+  authorName: string
+  authorUrl: string
+}
+
+const ModelCredit = ({
+  modelName,
+  modelUrl,
+  authorName,
+  authorUrl,
+}: ModelCreditProps) => {
+  return (
+    <span>
+      <Link
+        target="_blank"
+        href={`https://sketchfab.com/3d-models/${modelUrl}`}
+        className="text-blue-800"
+      >
+        <i>"{modelName}"</i>
+      </Link>{" "}
+      by{" "}
+      <Link
+        className="text-blue-800"
+        target="_blank"
+        href={`https://sketchfab.com/${authorUrl}`}
+      >
+        {authorName}
+      </Link>
+    </span>
   )
 }
