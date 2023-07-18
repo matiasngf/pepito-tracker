@@ -2,6 +2,7 @@ import type { FieldSet, Records } from "airtable"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useEffect } from "react"
 
+import { About } from "~/components/about"
 import { ThreeApp } from "~/components/three-app"
 import { usePepitoStore } from "~/hooks/use-pepito"
 import { client } from "~/utils/client"
@@ -66,8 +67,9 @@ const Page = ({
   return (
     <div className="relative w-screen h-screen">
       <ThreeApp />
+      <About className="absolute top-5 left-5" />
       <div className="absolute bottom-10 flex justify-center w-full">
-        <h1 className="text-white text-3xl lg:text-4xl opacity-50">
+        <h1 className="text-white text-3xl lg:text-4xl opacity-50 text-center">
           Pépito is {isOutside ? "out" : "back home"} {time}
         </h1>
       </div>

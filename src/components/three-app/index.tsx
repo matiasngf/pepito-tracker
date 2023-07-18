@@ -55,7 +55,7 @@ const Scene = () => {
         resolution={256}
         color="#000000"
       />
-      <group position={[isMobile ? 1 : 0, 0, isMobile ? 0.5 : 0]}>
+      <group position={[isMobile ? 0 : 0, 0, isMobile ? 1 : 0]}>
         {isOutside ? <Outside /> : <Inside />}
         <Cat />
       </group>
