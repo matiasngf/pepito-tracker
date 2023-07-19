@@ -1,6 +1,7 @@
 import type { FieldSet, Records } from "airtable"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import Head from "next/head"
+import { useRouter } from "next/router"
 import { useEffect } from "react"
 
 import { About } from "~/components/about"
@@ -65,13 +66,17 @@ const Page = ({
   }, [isOut, setIsOutside])
 
   const isOutside = usePepitoStore((state) => state.isOutside)
+
+  const router = useRouter()
+  const showUI = router.query.ui !== "false"
+
   return (
     <div className="relative w-screen h-screen">
       <Head>
         <title>Is pepito out?</title>
       </Head>
       <ThreeApp />
-      <About className="absolute top-5 left-5" />
+      {showUI && <About className="absolute top-5 left-5" />}
       <div className="absolute bottom-10 flex justify-center w-full">
         <h1 className="text-white text-3xl lg:text-4xl opacity-50 text-center">
           Pépito is {isOutside ? "out" : "back home"} {time}
