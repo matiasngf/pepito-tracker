@@ -5,12 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@andersonmancini/lens-flare':
+    specifier: ^1.0.1
+    version: 1.0.1(@react-three/drei@9.68.3)(@react-three/fiber@8.13.0)(maath@0.5.3)(postprocessing@6.32.2)(react-dom@18.2.0)(react@18.2.0)(three@0.152.2)
   '@react-three/drei':
     specifier: ^9.68.3
     version: 9.68.3(@react-three/fiber@8.13.0)(@types/three@0.152.0)(react-dom@18.2.0)(react@18.2.0)(three@0.152.2)
   '@react-three/fiber':
     specifier: ^8.13.0
     version: 8.13.0(react-dom@18.2.0)(react@18.2.0)(three@0.152.2)
+  '@react-three/postprocessing':
+    specifier: ^2.15.0
+    version: 2.15.0(@react-three/fiber@8.13.0)(@types/three@0.152.0)(react@18.2.0)(three@0.152.2)
   '@studio-freight/lenis':
     specifier: ^1.0.12
     version: 1.0.12
@@ -26,6 +32,9 @@ dependencies:
   next:
     specifier: ^13.4.2
     version: 13.4.2(react-dom@18.2.0)(react@18.2.0)
+  postprocessing:
+    specifier: ^6.32.2
+    version: 6.32.2(three@0.152.2)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -160,6 +169,26 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
     dev: true
+
+  /@andersonmancini/lens-flare@1.0.1(@react-three/drei@9.68.3)(@react-three/fiber@8.13.0)(maath@0.5.3)(postprocessing@6.32.2)(react-dom@18.2.0)(react@18.2.0)(three@0.152.2):
+    resolution: {integrity: sha512-VhJpb0IFRW2Vlm57RuIoxZ6dgpsq8UnkI0w+MFe+fcnw0NDdhPCJeBgZEtWtza9dJGCxTEOEYMxk+ox3iSNQWw==}
+    peerDependencies:
+      '@react-three/drei': ^9.58.5
+      '@react-three/fiber': ^8.13.0
+      maath: ^0.5.3
+      postprocessing: ^6.31.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      three: ^0.152.2
+    dependencies:
+      '@react-three/drei': 9.68.3(@react-three/fiber@8.13.0)(@types/three@0.152.0)(react-dom@18.2.0)(react@18.2.0)(three@0.152.2)
+      '@react-three/fiber': 8.13.0(react-dom@18.2.0)(react@18.2.0)(three@0.152.2)
+      maath: 0.5.3(@types/three@0.152.0)(three@0.152.2)
+      postprocessing: 6.32.2(three@0.152.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      three: 0.152.2
+    dev: false
 
   /@babel/code-frame@7.22.5:
     resolution: {integrity: sha512-Xmwn266vad+6DAqEB2A6V/CcZVp62BbwVmcOJc2RPuwih1kw02TjQvWVWlcKGbBPd+8/0V5DEkOcizRGYsspYQ==}
@@ -644,6 +673,24 @@ packages:
       zustand: 3.7.2(react@18.2.0)
     dev: false
 
+  /@react-three/postprocessing@2.15.0(@react-three/fiber@8.13.0)(@types/three@0.152.0)(react@18.2.0)(three@0.152.2):
+    resolution: {integrity: sha512-kldXieRcn8tB3bIVwRAFa1ojG11tkuMLAFYOra32E7y9n1nhVU4FKx+GxmblHSiRWpvGnEje/kYxDKTPjKj4eA==}
+    peerDependencies:
+      '@react-three/fiber': '>=8.0'
+      react: '>=18.0'
+      three: '>= 0.138.0'
+    dependencies:
+      '@react-three/fiber': 8.13.0(react-dom@18.2.0)(react@18.2.0)(three@0.152.2)
+      maath: 0.6.0(@types/three@0.152.0)(three@0.152.2)
+      n8ao: 1.6.7(postprocessing@6.32.2)(three@0.152.2)
+      postprocessing: 6.32.2(three@0.152.2)
+      react: 18.2.0
+      three: 0.152.2
+      three-stdlib: 2.23.13(three@0.152.2)
+    transitivePeerDependencies:
+      - '@types/three'
+    dev: false
+
   /@studio-freight/lenis@1.0.12:
     resolution: {integrity: sha512-iN3JQ6qJVc+L7vh8NjlDibw9dvjjifvlJ+s0UAkfwty+vW9MJxRfszb5X/eAhcbDLZW6MlvjRHoH9WSQH3J8eA==}
     dev: false
@@ -660,6 +707,10 @@ packages:
   /@types/css-font-loading-module@0.0.8:
     resolution: {integrity: sha512-PdJeLlCJj/ShOA+c0dXdZ/e1P0Cdjhip+dRBtPaigOqwKd0DiFx3NeO6T2E7AQ5JszSR3dub3YkQjc2hcQyxSw==}
     dev: true
+
+  /@types/draco3d@1.4.2:
+    resolution: {integrity: sha512-goh23EGr6CLV6aKPwN1p8kBD/7tT5V/bLpToSbarKrwVejqNrspVrv8DhliteYkkhZYrlq/fwKZRRUzH4XN88w==}
+    dev: false
 
   /@types/json-schema@7.0.12:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
@@ -2709,6 +2760,16 @@ packages:
       three: 0.152.2
     dev: false
 
+  /maath@0.6.0(@types/three@0.152.0)(three@0.152.2):
+    resolution: {integrity: sha512-dSb2xQuP7vDnaYqfoKzlApeRcR2xtN8/f7WV/TMAkBC8552TwTLtOO0JTcSygkYMjNDPoo6V01jTw/aPi4JrMw==}
+    peerDependencies:
+      '@types/three': '>=0.144.0'
+      three: '>=0.144.0'
+    dependencies:
+      '@types/three': 0.152.0
+      three: 0.152.2
+    dev: false
+
   /make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
@@ -2835,6 +2896,16 @@ packages:
       object-assign: 4.1.1
       thenify-all: 1.6.0
     dev: true
+
+  /n8ao@1.6.7(postprocessing@6.32.2)(three@0.152.2):
+    resolution: {integrity: sha512-D2Hu+cRSLEjz93bWDhQ5lvRxA/S3QciE+eLGEgiEwyYrxV2gTgT8XsSya9FOO2BdpgiqeduJpfZnUS9X/QVtCQ==}
+    peerDependencies:
+      postprocessing: '>=6.30.0'
+      three: '>=0.137'
+    dependencies:
+      postprocessing: 6.32.2(three@0.152.2)
+      three: 0.152.2
+    dev: false
 
   /nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
@@ -3284,6 +3355,15 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
+
+  /postprocessing@6.32.2(three@0.152.2):
+    resolution: {integrity: sha512-BpjIHeElXRmkcqO6p8Pi6W1uDcivQa2FVQ/Swnoo32Cg5bq/bb0mh9hXSHeCkIBD0W4D2KU8Fg7jBICztcN9iQ==}
+    engines: {node: '>= 0.13.2'}
+    peerDependencies:
+      three: '>= 0.138.0 < 0.155.0'
+    dependencies:
+      three: 0.152.2
+    dev: false
 
   /potpack@1.0.2:
     resolution: {integrity: sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==}
@@ -4045,6 +4125,25 @@ packages:
       '@babel/runtime': 7.22.6
       '@types/offscreencanvas': 2019.7.0
       '@webgpu/glslang': 0.0.15
+      chevrotain: 10.5.0
+      draco3d: 1.5.6
+      fflate: 0.6.10
+      ktx-parse: 0.4.5
+      mmd-parser: 1.0.4
+      opentype.js: 1.3.4
+      potpack: 1.0.2
+      three: 0.152.2
+      zstddec: 0.0.2
+    dev: false
+
+  /three-stdlib@2.23.13(three@0.152.2):
+    resolution: {integrity: sha512-WU4XHs4E6szAyoREzTs5bUAc1WFadiz5jRjNlA7aIIqf+raT4jfA320P0XmlyZz/wJwmpZnOuki4kAFsmadkTQ==}
+    peerDependencies:
+      three: '>=0.128.0'
+    dependencies:
+      '@types/draco3d': 1.4.2
+      '@types/offscreencanvas': 2019.7.0
+      '@types/webxr': 0.5.2
       chevrotain: 10.5.0
       draco3d: 1.5.6
       fflate: 0.6.10

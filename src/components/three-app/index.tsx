@@ -1,4 +1,4 @@
-import { ContactShadows, PerspectiveCamera } from "@react-three/drei"
+import { PerspectiveCamera } from "@react-three/drei"
 import { Canvas, useThree } from "@react-three/fiber"
 import { useMemo, useState } from "react"
 
@@ -46,15 +46,6 @@ const Scene = () => {
   return (
     <>
       <Background isOutside={isOutside} />
-      <ContactShadows
-        opacity={0.5}
-        scale={4}
-        blur={3}
-        far={5}
-        position={[0, 0.0, 0]}
-        resolution={256}
-        color="#000000"
-      />
       <group position={[isMobile ? 0 : 0, 0, isMobile ? 1 : 0]}>
         {isOutside ? <Outside /> : <Inside />}
         <Cat />

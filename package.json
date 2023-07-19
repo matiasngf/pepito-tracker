@@ -15,13 +15,16 @@
     "tsc": "tsc --pretty --noEmit"
   },
   "dependencies": {
+    "@andersonmancini/lens-flare": "^1.0.1",
     "@react-three/drei": "^9.68.3",
     "@react-three/fiber": "^8.13.0",
+    "@react-three/postprocessing": "^2.15.0",
     "@studio-freight/lenis": "^1.0.12",
     "airtable": "^0.12.1",
     "clsx": "^1.2.1",
     "gsap": "^3.11.5",
     "next": "^13.4.2",
+    "postprocessing": "^6.32.2",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
