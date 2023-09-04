@@ -65,13 +65,20 @@ export const About = ({ className }: AboutProps) => {
               modelUrl="cat-murdered-soul-suspect-836312def1b84e588866500a2bf79f0f"
               authorName="mark2580"
               authorUrl="mark2580"
-            />{" "}
-            and{" "}
+            />
+            {", "}
             <ModelCredit
               modelName="Wooden Table"
               modelUrl="wooden-table-c0f6e92135be4206a0b5de58c9d5f336"
               authorName="Ygor L.Cavalcante"
               authorUrl="ygorofflc"
+            />
+            {" and"}
+            <ModelCredit
+              modelName="Birthday Cake"
+              modelUrl="birthday-cake-87f446798bb544c6b0dca2504b1f9d50"
+              authorName="Vie Dinh"
+              authorUrl="yenvydinh2295"
             />
             . The models, materials, and animations were modified to fit this
             project.

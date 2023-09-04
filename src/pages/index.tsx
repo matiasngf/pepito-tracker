@@ -1,4 +1,5 @@
 import type { FieldSet, Records } from "airtable"
+import JSConfetti from "js-confetti"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import Head from "next/head"
 import { useRouter } from "next/router"
@@ -69,6 +70,28 @@ const Page = ({
 
   const router = useRouter()
   const showUI = router.query.ui !== "false"
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const isBirthday = new Date().getMonth() === 8 && new Date().getDate() === 4
+
+    if (!isBirthday) return
+
+    const timeout = setTimeout(() => {
+      const jsConfetti = new JSConfetti()
+      jsConfetti.addConfetti()
+      jsConfetti.addConfetti({
+        emojis: ["🐈", "🐱", "🥳", "🎉"],
+        confettiNumber: 10,
+        emojiSize: 100,
+      })
+    }, 500)
+
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [])
 
   return (
     <div className="relative w-screen h-screen">

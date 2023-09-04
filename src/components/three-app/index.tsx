@@ -5,6 +5,7 @@ import { useMemo, useState } from "react"
 import { usePepitoStore } from "~/hooks/use-pepito"
 
 import { Background } from "./background"
+import { Cake } from "./cake"
 import { Cat } from "./cat"
 import { Inside } from "./inside"
 import { Outside } from "./outside"
@@ -43,6 +44,8 @@ const Scene = () => {
     setIsMobile(aspect < 1)
   }, [canvasSize])
 
+  const isBirthday = new Date().getMonth() === 8 && new Date().getDate() === 4
+
   return (
     <>
       <Background isOutside={isOutside} />
@@ -50,6 +53,7 @@ const Scene = () => {
         {isOutside ? <Outside /> : <Inside />}
         <Cat />
       </group>
+      {isBirthday && <Cake />}
       <PerspectiveCamera
         makeDefault
         position={[-4, 1, 3]}

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Birthday Cake !
+* source:	https://sketchfab.com/3d-models/birthday-cake-87f446798bb544c6b0dca2504b1f9d50
+* author:	Vie Dinh (https://sketchfab.com/yenvydinh2295)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Birthday Cake !" (https://sketchfab.com/3d-models/birthday-cake-87f446798bb544c6b0dca2504b1f9d50) by Vie Dinh (https://sketchfab.com/yenvydinh2295) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
