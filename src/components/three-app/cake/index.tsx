@@ -1,7 +1,9 @@
 import { useGLTF } from "@react-three/drei"
-import { useMemo } from "react"
+import { useEffect, useMemo } from "react"
 import type { Group, Mesh, Object3D } from "three"
 import type { GLTF } from "three-stdlib"
+
+import { useIsMobile } from "~/hooks/use-is-mobile"
 
 interface CakeGLTF extends GLTF {
   nodes: {
@@ -21,10 +23,10 @@ interface CakeGLTF extends GLTF {
   }
 }
 
-const objectScale = 0.004
-
 export const Cake = () => {
   const { nodes } = useGLTF("/birthday_cake/scene.gltf") as CakeGLTF
+
+  const isMobile = useIsMobile()
 
   const { SceneNode } = useMemo(() => {
     const SceneNode = nodes.Sketchfab_Scene.clone()
@@ -32,11 +34,16 @@ export const Cake = () => {
     return { SceneNode }
   }, [nodes])
 
+  useEffect(() => {
+    const scale = isMobile ? 0.0015 : 0.0035
+
+    SceneNode.scale.set(scale, scale, scale)
+  }, [isMobile, SceneNode])
+
   return (
     <group
-      position={[0.3, 0.1, 1.65]}
+      position={[isMobile ? -0.3 : 0.3, 0.1, 1.65]}
       rotation={[0, Math.PI * 1.3, 0]}
-      scale={[objectScale, objectScale, objectScale]}
     >
       <primitive object={SceneNode} />
     </group>

@@ -1,7 +1,7 @@
 import { PerspectiveCamera } from "@react-three/drei"
-import { Canvas, useThree } from "@react-three/fiber"
-import { useMemo, useState } from "react"
+import { Canvas } from "@react-three/fiber"
 
+import { useIsMobile } from "~/hooks/use-is-mobile"
 import { usePepitoStore } from "~/hooks/use-pepito"
 
 import { Background } from "./background"
@@ -30,19 +30,7 @@ export const ThreeApp = () => {
 const Scene = () => {
   const isOutside = usePepitoStore((state) => state.isOutside)
 
-  const [isMobile, setIsMobile] = useState(false)
-  const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 })
-
-  useThree(({ size }) => {
-    if (size.width !== canvasSize.width || size.height !== canvasSize.height) {
-      setCanvasSize(size)
-    }
-  })
-
-  useMemo(() => {
-    const aspect = canvasSize.width / canvasSize.height
-    setIsMobile(aspect < 1)
-  }, [canvasSize])
+  const isMobile = useIsMobile()
 
   const isBirthday = new Date().getMonth() === 8 && new Date().getDate() === 4
 
